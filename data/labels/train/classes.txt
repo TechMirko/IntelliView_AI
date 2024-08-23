@@ -1,0 +1,3 @@
+five_euros
+green_traffic_light
+red_traffic_light

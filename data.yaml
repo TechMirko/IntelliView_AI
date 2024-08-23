@@ -1,0 +1,9 @@
+path: 'C:\Users\mirko\Desktop\Software\Tecnicamente 3.0\'
+train: 'C:\Users\mirko\Desktop\Software\Tecnicamente 3.0\data\images\train'
+val: 'C:\Users\mirko\Desktop\Software\Tecnicamente 3.0\data\images\val'
+
+nc: 3
+names:
+  0: "five_euros"
+  1: "green_traffic_light"
+  2: "red_traffic_light"
