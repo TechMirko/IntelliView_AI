@@ -36,12 +36,12 @@ def publish(client, msg: str):
 
 # ------ FUNZIONE PER RICONOSCERE UNA IMMAGINE ------ #
 def detect(i: str) -> None:
-    model = YOLO('C:\\Users\\mirko\\Desktop\\Software\\Tecnicamente 3.0\\runs\\detect\\train\\weights\\best.pt')
+    model = YOLO('path\of\the\model')
     model.predict(i, conf=0.7, save=True, save_txt=True)
 
 # ------ FUNZIONE PER LEGGERE IL FILE CON I RISULTATI ------ #
 def get_detection_name() -> str:
-    path = f"C:\\Users\\mirko\\Desktop\\Software\\Tecnicamente 3.0\\runs\\detect\\predict\\labels"
+    path = f"path\of\the\predicts\labels"
     permissions = 0o755
 
     # ottengo il file txt senza conoscerne il nome
@@ -70,14 +70,14 @@ def get_detection_name() -> str:
 
 # ------ FUNZIONE PER RIMUOVERE LA CARTELLA CREATA PER INIZIALIZZARE ------ #
 def init_folder() -> None:
-    path = "C:\\Users\\mirko\\Desktop\\Software\\Tecnicamente 3.0\\runs\\detect\\predict"
+    path = "path\of\the\predicts\labels"
     shutil.rmtree(path)
-    imgToErase = "C:\\Users\\mirko\\Desktop\\Software\\Tecnicamente 3.0\\test_imgs\\img.jpg"
+    imgToErase = "path\of\the\imgs from the server\"
     os.remove(imgToErase)
 
 # ------ FUNZIONE CHE MI DA I RISULTATI ELABORATI ------ #
 def recognise() -> None:
-    img = f"C:\\Users\\mirko\\Desktop\\Software\\Tecnicamente 3.0\\test_imgs\\img.jpg"
+    img = f"path\of\the\imgs from the server"
     # esegui il riconoscimento
     detect(img)
     oggetto = get_detection_name()
@@ -95,7 +95,7 @@ def recognise() -> None:
 
 def main() -> None:
     print("In attesa della foto...")
-    path = "C:\\Users\\mirko\\Desktop\\Software\\Tecnicamente 3.0\\test_imgs"
+    path = "path\of\the\imgs from the server\"
     riconosciuto = 0
     while riconosciuto == 0:
         files = os.listdir(path)
