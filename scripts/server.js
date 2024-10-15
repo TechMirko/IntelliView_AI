@@ -8,7 +8,7 @@ const {writeFile} = require('fs')
 const express = require('express')
 
 const app = express()
-const path = "C:\\Users\\mirko\\Desktop\\Software\\Tecnicamente 3.0\\test_imgs\\img.jpg"
+const path = "your\\path" // dove viene salvata l'immagine
 const port = 8000
 
 app.use(express.raw({type: 'image/jpeg', limit: '5mb'}))
