@@ -1,6 +1,3 @@
-# PER USARE CORRETTAMENTE: avviare prima uvicorn da console con "uvicorn test:app --reload"
-# POI lanciare questo script
-
 from ultralytics import YOLO
 import os
 import shutil
